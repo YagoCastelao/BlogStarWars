@@ -40,7 +40,9 @@ const Home = () => {
         key={item.uid}
       >
         <img
-          src={`https://starwars-visualguide.com/assets/img/${type}/${item.uid}.jpg`}
+          src={`https://starwars-visualguide.com/assets/img/${
+            type === "people" ? "characters" : type
+          }/${item.uid}.jpg`}
           className="card-img-top"
           alt={item.name}
           style={{ borderTopLeftRadius: "15px", borderTopRightRadius: "15px" }}
@@ -55,7 +57,7 @@ const Home = () => {
           </p>
           <div className="d-flex justify-content-center">
             <Link
-              to={`/details/${type}/${item.uid}`}
+              to={`/details/${type === "people" ? "people" : type}/${item.uid}`}
               className="btn btn-primary me-2"
             >
               Ler mais
@@ -75,9 +77,9 @@ const Home = () => {
 
   return (
     <div className="container mt-5 pb-">
-      <h2 className="text-center text-white pt-5">Personagens</h2>
+      <h2 className="text-center text-white">Personagens</h2>
       <div className="d-flex flex-wrap justify-content-center pt-4">
-        {renderCards(people, "characters")}
+        {renderCards(people, "people")}
       </div>
       <h2 className="text-center text-white mt-5">Planetas</h2>
       <div className="d-flex flex-wrap justify-content-center">

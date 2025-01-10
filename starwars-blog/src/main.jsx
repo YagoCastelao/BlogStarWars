@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import Details from "./components/Details";
 import "./assets/starwars.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
