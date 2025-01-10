@@ -1,0 +1,29 @@
+.navbar {
+  height: 85px;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.navbar-brand img {
+  width: 200px;
+  height: auto;
+}
+
+body {
+  background-image: url("https://wallpapers.com/images/high/death-star-silhouettein-space-uhljz1j6ggbjhn60.webp");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #fff;
+  height: 100vh;
+  margin: 0;
+}
+
+.card-body {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+}
