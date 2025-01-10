@@ -1,6 +1,8 @@
 # Star Wars Blog
 
-¡Bienvenido a **Star Wars Blog**! Esta es una aplicación web desarrollada con **React**, **Vite**, utilizando la **SWAPI** (Star Wars API) para mostrar información sobre personajes, planetas y vehículos del universo de Star Wars. La aplicación te permite visualizar detalles de los elementos, agregarlos a tus favoritos y explorar de manera interactiva y divertida el universo de Star Wars.
+![Badge de Tecnologías](https://img.shields.io/badge/React-v18-blue?style=flat-square&logo=react)![Badge de Tecnologías](https://img.shields.io/badge/Vite-v4-purple?style=flat-square&logo=vite)
+
+¡Bienvenido a **Star Wars Blog**! Esta es una aplicación web desarrollada con **React**, **Vite**, utilizando la **SWAPI** (Star Wars API) para mostrar información sobre personajes, planetas y vehículos del universo de Star Wars. La aplicación te permite visualizar detalles de los elementos, agregarlos a tus favoritos y explorar el universo de Star Wars.
 
 ![Star Wars Logo](https://pngimg.com/uploads/star_wars_logo/star_wars_logo_PNG12.png)
 
@@ -28,33 +30,35 @@ Antes de comenzar, necesitas tener instalado:
 - [Node.js](https://nodejs.org/)
 - [NPM o Yarn](https://www.npmjs.com/)
 
-## Cómo Ejecutar el Proyecto
+## Cómo Ejecutar el Proyecto ⚙️
 
-### 1. Clona el Repositorio
-
-Primero, clona el repositorio en tu máquina local:
-
-```bash
-git clone https://github.com/tu-usuario/star-wars-blog.git
-
-### 2. Instala las Dependencias
-
-Ingresa en el repositorio del proyecto e instala las dependencias:
-
-```bash
-cd starwars-blog
-npm install
+1. Clona el Repositorio
+   ```bash
+   git clone https://github.com/tu-usuario/BlogStarwars.git
    
-### 3. Ejecuta el Proyecto
-
+2. Instala las Dependencias
+Ingresa en el directorio del proyecto e instala las dependencias:
+   ```bash
+   cd starwars-blog
+   npm install
+   
+3. Ejecuta el Proyecto
 Ahora, ejecuta el proyecto con el siguiente comando:
+   ```bash
+   npm run dev
 
+Estructura del Proyecto
+El proyecto tiene la siguiente estructura de archivos:
 ```bash
-npm run dev
-
-## Contribuyendo
-Si deseas contribuir, realiza un fork de este repositorio y envía un pull request.
-
-## Licencia
-Este proyecto está bajo la licencia MIT.
-
+/starwars-blog
+│
+├── /public                 # Archivos públicos
+│
+├── /src                    # Código fuente de la aplicación
+│   ├── /components         # Componentes de la aplicación (Navbar, Home, Details)
+│   ├── /context            # Contexto para gestionar los favoritos
+│   ├── App.jsx             # Componente principal de la aplicación
+│   └── main.jsx            # Archivo de inicialización
+│
+├── package.json            # Dependencias y scripts del proyecto
+└── README.md               # Documentación del proyecto
