@@ -53,14 +53,14 @@ const Home = () => {
         >
           <h5 className="card-title">{item.name}</h5>
           <p className="card-text">
-            {item.species || "Sem descrição disponível."}
+            {item.species || "¡No hay descripción disponible!"}
           </p>
           <div className="d-flex justify-content-center">
             <Link
               to={`/details/${type === "people" ? "people" : type}/${item.uid}`}
               className="btn btn-primary me-2"
             >
-              Ler mais
+              Leer más
             </Link>
             <button
               className={`btn ${
@@ -77,7 +77,7 @@ const Home = () => {
 
   return (
     <div className="container mt-5 pb-">
-      <h2 className="text-center text-white">Personagens</h2>
+      <h2 className="text-center text-white">Personajes</h2>
       <div className="d-flex flex-wrap justify-content-center pt-4">
         {renderCards(people, "people")}
       </div>
@@ -85,7 +85,7 @@ const Home = () => {
       <div className="d-flex flex-wrap justify-content-center">
         {renderCards(planets, "planets")}
       </div>
-      <h2 className="text-center text-white mt-5">Veículos</h2>
+      <h2 className="text-center text-white mt-5">Vehículos</h2>
       <div className="d-flex flex-wrap justify-content-center">
         {renderCards(vehicles, "vehicles")}
       </div>
