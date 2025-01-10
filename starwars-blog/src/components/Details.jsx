@@ -9,7 +9,7 @@ const Details = () => {
   const [imageUrl, setImageUrl] = useState("");
 
   useEffect(() => {
-    const fetchDetails = async () => {
+    const getDetails = async () => {
       try {
         const response = await fetch(`https://swapi.tech/api/${type}/${id}`);
         const data = await response.json();
@@ -25,11 +25,11 @@ const Details = () => {
       }
     };
 
-    fetchDetails();
+    getDetails();
   }, [id, type]);
 
   if (loading) {
-    return <div>Carregando...</div>;
+    return <div>Cargando...</div>;
   }
 
   if (!itemDetails) {
@@ -43,17 +43,17 @@ const Details = () => {
           <Card className="card-details">
             <Card.Body>
               <Card.Title>
-                {itemDetails.name || "Nome não disponível"}
+                {itemDetails.name}
               </Card.Title>
               <Card.Text>
-                <strong>Descripción:</strong> {itemDetails.description || ""}
+                <strong>Descripción:</strong> {itemDetails.description}
               </Card.Text>
               {Object.keys(itemDetails).map((key) => {
                 if (key !== "name" && key !== "description") {
                   return (
                     <div key={key}>
                       <strong>{key.replace(/_/g, " ")}:</strong>{" "}
-                      {itemDetails[key] || "Não disponível"}
+                      {itemDetails[key]}
                     </div>
                   );
                 }
