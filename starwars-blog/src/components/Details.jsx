@@ -46,8 +46,7 @@ const Details = () => {
                 {itemDetails.name || "Nome não disponível"}
               </Card.Title>
               <Card.Text>
-                <strong>Descrição:</strong>{" "}
-                {itemDetails.description || "Nenhuma descrição disponível."}
+                <strong>Descripción:</strong> {itemDetails.description || ""}
               </Card.Text>
               {Object.keys(itemDetails).map((key) => {
                 if (key !== "name" && key !== "description") {
